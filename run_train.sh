@@ -1,0 +1,20 @@
+python run_summarization.py \
+    --model_name_or_path facebook/bart-large \
+    --do_train \
+    --do_eval \
+    --train_file /home/ypd-19-2/docomo/data_source_target/train/train.json \
+    --validation_file /home/ypd-19-2/docomo/data_source_target/train/val.json \
+    --source_prefix "summarize: " \
+    --output_dir /home/ypd-19-2/docomo/checkpoints_decode_eval_1.0 \
+    --overwrite_output_dir  \
+    --gradient_accumulation_steps=4 \
+    --per_device_train_batch_size=1 \
+    --per_device_eval_batch_size=1 \
+    --save_total_limit=1 \
+    --eval_steps=50 \
+    --logging_steps=50 \
+    --save_steps=15000 \
+    --num_train_epochs=4.0 \
+    --learning_rate=1e-3 \
+    --predict_with_generate \
+    --pre_seq_len=200
