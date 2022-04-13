@@ -3,6 +3,7 @@ Implementation of "The Power of Scale for Parameter-Efficient Prompt Tuning"
 Currently, we support the following huggigface models:
 
 - `BartForConditionalGeneration`
+- `T5ForConditionalGeneration`
 ## Setup
 
 ```
