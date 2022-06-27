@@ -4,6 +4,11 @@ Currently, we support the following huggigface models:
 
 - `BartForConditionalGeneration`
 - `T5ForConditionalGeneration`
+
+In 2022.6, we support GPT2 now:
+
+- `GPT2LMHeadModel`
+
 ## Setup
 
 ```
@@ -92,6 +97,22 @@ bash run_test.sh
 You can adjust the values for the arguments  `--test_file` in `run_test.sh`
 
 Other setting, you can also adjust in `run_test.sh`. The generated summary is in `output_dir/generated_predictions.txt`
+
+## GPT2
+
+To run prompt tuning with GPT2, you can use:
+
+```
+run_gpt.sh
+```
+
+You can adjust prompt length with `--pre_seq_len`, model_name with `--model_name_or_path`,  dropout rate of prompt with `--prefix_drop`
+
+To test prompt tuning with GPT2， you can use:
+
+```
+test_gpt.sh
+```
 
 ## Citation
 
